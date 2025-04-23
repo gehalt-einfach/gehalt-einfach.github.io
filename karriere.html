@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karriere - Müller & Partner Steuerberatung</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --accent: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+        
+        /* Subpage Styles */
+        .subpage-header {
+            background-color: var(--dark);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url("/api/placeholder/1200/300");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .subpage-header h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .subpage-header p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .subpage-content {
+            padding: 60px 0;
+        }
+        
+        .subpage-content h2 {
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+        
+        .subpage-content h3 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .subpage-content p {
+            margin-bottom: 20px;
+        }
+        
+        .subpage-content ul {
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+        
+        .subpage-content ul li {
+            margin-bottom: 10px;
+        }
+        
+        /* Karriere Styles */
+        .job-listings {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .job-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .job-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .job-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .job-card .job-type {
+            display: inline-block;
+            background-color: var(--light);
+            color: var(--primary);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        .job-card ul {
+            margin-bottom: 20px;
+        }
+        
+        .job-card .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .job-card .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .benefits {
+            background-color: var(--light);
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+        
+        .benefits-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .benefit-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .benefit-card .benefit-icon {
+            font-size: 40px;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .application-process {
+            margin-top: 60px;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .process-step {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 50px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-box {
+            background-color: var(--primary);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .cta-box h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta-box p {
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 50px 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column a:hover {
+            color: white;
+        }
+        
+        .contact-info {
+            margin-bottom: 10px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid #3a5168;
+            color: #ccc;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .subpage-header h1 {
+                font-size: 32px;
+            }
+            
+            .subpage-header p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Müller & Partner</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Leistungen</a></li>
+                    <li><a href="index.html#team">Team</a></li>
+                    <li><a href="index.html#pricing">Honorar</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <header class="subpage-header">
+        <div class="container">
+            <h1>Karriere bei Müller & Partner</h1>
+            <p>Werden Sie Teil unseres Teams und starten Sie Ihre Karriere in der Steuerberatung</p>
+        </div>
+    </header>
+    
+    <section class="subpage-content">
+        <div class="container">
+            <h2>Aktuelle Stellenangebote</h2>
+            <p>Wir sind ständig auf der Suche nach talentierten und motivierten Mitarbeitern, die unser Team verstärken möchten. Entdecken Sie unsere aktuellen Stellenangebote und bewerben Sie sich noch heute!</p>
+            
+            <div class="job-listings">
+                <div class="job-card">
+                    <h3>Steuerberater (m/w/d)</h3>
+                    <span class="job-type">Vollzeit</span>
+                    <p>Wir suchen erfahrene Steuerberater zur Verstärkung unseres Teams im Bereich Unternehmensbesteuerung.</p>
+                    <h4>Ihre Aufgaben:</h4>
+                    <ul>
+                        <li>Steuerliche Beratung von Kapital- und Personengesellschaften</li>
+                        <li>Erstellung von Steuererklärungen für Unternehmen</li>
+                        <li>Kommunikation mit Finanzbehörden</li>
+                        <li>Unterstützung bei steuerlichen Gestaltungen</li>
+                    </ul>
+                    <a href="kontakt.html" class="btn">Mehr erfahren</a>
+                </div>
+                
+                <div class="job-card">
+                    <h3>Steuerfachangestellter (m/w/d)</h3>
+                    <span class="job-type">Vollzeit</span>
+                    <p>Zur Verstärkung unseres Teams suchen wir zum nächstmöglichen Zeitpunkt einen Steuerfachangestellten.</p>
+                    <h4>Ihre Aufgaben:</h4>
+                    <ul>
+                        <li>Erstellung von Finanzbuchhaltungen</li>
+                        <li>Erstellung von Steuererklärungen für natürliche Personen</li>
+                        <li>Erstellung von Jahresabschlüssen</li>
+                        <li>Mandantenbetreuung</li>
+                    </ul>
+                    <a href="kontakt.html" class="btn">Mehr erfahren</a>
+                </div>
+                
+                <div class="job-card">
+                    <h3>Auszubildender Steuerfachangestellter (m/w/d)</h3>
+                    <span class="job-type">Ausbildung</span>
+                    <p>Wir bieten zum 1. August 2026 einen Ausbildungsplatz zum Steuerfachangestellten an.</p>
+                    <h4>Wir erwarten:</h4>
+                    <ul>
+                        <li>Realschulabschluss oder Abitur</li>
+                        <li>Interesse an Steuerrecht und Wirtschaft</li>
+                        <li>Sorgfältiges und genaues Arbeiten</li>
+                        <li>Teamfähigkeit und Engagement</li>
+                    </ul>
+                    <a href="kontakt.html" class="btn">Mehr erfahren</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="benefits">
+        <div class="container">
+            <h2 style="text-align: center;">Was wir bieten</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">Als modernes Steuerberatungsunternehmen bieten wir unseren Mitarbeitern attraktive Arbeitsbedingungen und zahlreiche Vorteile.</p>
+            
+            <div class="benefits-content">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎓</div>
+                    <h3>Fortbildung</h3>
+                    <p>Regelmäßige Weiterbildungen und Seminare zur persönlichen und fachlichen Entwicklung.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🕒</div>
+                    <h3>Flexible Arbeitszeiten</h3>
+                    <p>Wir bieten flexible Arbeitszeitmodelle und die Möglichkeit zum teilweisen Homeoffice.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💼</div>
+                    <h3>Karrierechancen</h3>
+                    <p>Spannende Aufgaben und vielfältige Entwicklungsmöglichkeiten in einem wachsenden Unternehmen.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">👥</div>
+                    <h3>Teamarbeit</h3>
+                    <p>Kollegiales Arbeitsumfeld mit flachen Hierarchien und einem starken Zusammenhalt.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Attraktive Vergütung</h3>
+                    <p>Wettbewerbsfähiges Gehalt mit Zusatzleistungen und leistungsabhängigen Boni.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎉</div>
+                    <h3>Events</h3>
+                    <p>Regelmäßige Teamevents, Betriebsausflüge und gemeinsame Feiern stärken den Zusammenhalt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="application-process">
+        <div class="container">
+            <h2 style="text-align: center;">Bewerbungsprozess</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">So läuft der Bewerbungsprozess bei Müller & Partner ab:</p>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Bewerbung</h3>
+                    <p>Senden Sie uns Ihre vollständigen Bewerbungsunterlagen per E-Mail oder Post.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Sichtung</h3>
+                    <p>Wir prüfen Ihre Unterlagen und melden uns innerhalb von 2 Wochen bei Ihnen.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Vorstellungsgespräch</h3>
+                    <p>Bei gegenseitigem Interesse laden wir Sie zu einem persönlichen Gespräch ein.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Entscheidung</h3>
+                    <p>Nach einer internen Abstimmung geben wir Ihnen zeitnah eine Rückmeldung.</p>
+                </div>
+            </div>
+            
+            <div class="cta-box">
+                <h2>Initiativbewerbung</h2>
+                <p>Sie haben keine passende Stelle gefunden, möchten aber trotzdem Teil unseres Teams werden? Wir freuen uns auch über Ihre Initiativbewerbung!</p>
+                <a href="kontakt.html" class="btn">Jetzt bewerben</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Müller & Partner</h3>
+                    <p>Ihre Experten für Steuerberatung und Unternehmensberatung in Musterstadt.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontakt</h3>
+                    <div class="contact-info">
+                        <p>Musterstraße 123</p>
+                        <p>12345 Musterstadt</p>
+                    </div>
+                    <div class="contact-info">
+                        <p>Tel: 030 12345678</p>
+                        <p>E-Mail: info@mueller-partner.de</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Öffnungszeiten</h3>
+                    <div class="contact-info">
+                        <p>Mo - Do: 8:00 - 17:00 Uhr</p>
+                        <p>Fr: 8:00 - 15:00 Uhr</p>
+                        <p>Termine nach Vereinbarung</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                        <li><a href="agb.html">AGB</a></li>
+                        <li><a href="karriere.html">Karriere</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Müller & Partner Steuerberatung. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

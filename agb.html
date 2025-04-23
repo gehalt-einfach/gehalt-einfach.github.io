@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGB - Müller & Partner Steuerberatung</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --accent: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+        
+        /* Subpage Styles */
+        .subpage-header {
+            background-color: var(--dark);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url("/api/placeholder/1200/300");
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .subpage-header h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .subpage-content {
+            padding: 60px 0;
+        }
+        
+        .subpage-content h2 {
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+        
+        .subpage-content h3 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .subpage-content p {
+            margin-bottom: 20px;
+        }
+        
+        .subpage-content ul {
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+        
+        .subpage-content ul li {
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 50px 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column a:hover {
+            color: white;
+        }
+        
+        .contact-info {
+            margin-bottom: 10px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid #3a5168;
+            color: #ccc;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .subpage-header h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Müller & Partner</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Leistungen</a></li>
+                    <li><a href="index.html#team">Team</a></li>
+                    <li><a href="index.html#pricing">Honorar</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <header class="subpage-header">
+        <div class="container">
+            <h1>Allgemeine Geschäftsbedingungen</h1>
+        </div>
+    </header>
+    
+    <section class="subpage-content">
+        <div class="container">
+            <h2>1. Geltungsbereich</h2>
+            <p>Die nachstehenden allgemeinen Geschäftsbedingungen gelten für alle Rechtsgeschäfte zwischen der Müller & Partner Steuerberatungsgesellschaft (nachfolgend "Müller & Partner" genannt) und ihren Mandanten. Abweichende Vereinbarungen und Ergänzungen bedürfen zu ihrer Wirksamkeit der Schriftform.</p>
+            
+            <h2>2. Zustandekommen des Vertrages</h2>
+            <p>Durch Unterzeichnung eines Steuerberatungsvertrages oder durch die Inanspruchnahme einer Leistung von Müller & Partner kommt ein Steuerberatungsvertrag zustande. Müller & Partner ist jedoch berechtigt, die Annahme eines Mandats abzulehnen.</p>
+            
+            <h2>3. Leistungsumfang</h2>
+            <p>Der Umfang der zu erbringenden Leistungen ergibt sich aus dem Steuerberatungsvertrag, dem Auftrag oder aus den Umständen der Beratungssituation. Müller & Partner erbringt seine Leistungen nach bestem Wissen und Gewissen auf der Grundlage der vom Mandanten zur Verfügung gestellten Informationen und Unterlagen.</p>
+            
+            <h3>3.1 Mitwirkungspflicht des Mandanten</h3>
+            <p>Der Mandant ist verpflichtet, an der Ausführung des Auftrags mitzuwirken und alle erforderlichen Unterlagen, Informationen und Auskünfte vollständig und zeitnah zur Verfügung zu stellen. Insbesondere hat der Mandant Müller & Partner rechtzeitig über alle Vorgänge und Umstände zu informieren, die für die Ausführung des Auftrags von Bedeutung sein können.</p>
+            
+            <h3>3.2 Prüfungspflicht</h3>
+            <p>Müller & Partner ist ohne besondere schriftliche Vereinbarung nicht verpflichtet, die Vollständigkeit und Richtigkeit der vom Mandanten vorgelegten Unterlagen und erteilten Auskünfte zu überprüfen.</p>
+            
+            <h2>4. Honorar und Zahlungsbedingungen</h2>
+            <p>Die Vergütung für die steuerberatenden Tätigkeiten richtet sich, soweit nichts anderes schriftlich vereinbart wurde, nach der Steuerberatervergütungsverordnung (StBVV) in der jeweils gültigen Fassung.</p>
+            
+            <h3>4.1 Vorschuss</h3>
+            <p>Müller & Partner ist berechtigt, angemessene Vorschüsse zu verlangen.</p>
+            
+            <h3>4.2 Fälligkeit</h3>
+            <p>Rechnungen werden mit Zugang fällig und sind innerhalb von 14 Tagen ohne Abzug zahlbar.</p>
+            
+            <h3>4.3 Aufrechnung</h3>
+            <p>Der Mandant kann nur mit unbestrittenen oder rechtskräftig festgestellten Forderungen aufrechnen.</p>
+            
+            <h2>5. Haftung</h2>
+            <p>Müller & Partner haftet für eigenes Verschulden und für Verschulden seiner Erfüllungsgehilfen. Die Haftung ist für Fälle einfacher Fahrlässigkeit auf einen Betrag von 1 Million Euro beschränkt. Soweit im Einzelfall hiervon abgewichen werden soll, bedarf es einer schriftlichen Vereinbarung, die gesondert zu erstellen ist.</p>
+            
+            <p>Die Haftungsbeschränkung gilt nicht bei Vorsatz oder grober Fahrlässigkeit und bei der Verletzung von Leben, Körper und Gesundheit.</p>
+            
+            <h2>6. Aufbewahrung von Unterlagen</h2>
+            <p>Müller & Partner bewahrt die im Zusammenhang mit der Erledigung eines Auftrags übergebenen und die selbst angefertigten Unterlagen sowie den über den Auftrag geführten Schriftwechsel nach den Vorschriften der Verordnung über die Führung und Aufbewahrung von Büchern, Aufzeichnungen und Unterlagen in elektronischer Form sowie zum Datenzugriff (GoBD) auf.</p>
+            
+            <h3>6.1 Herausgabe</h3>
+            <p>Nach Beendigung des Auftrags hat Müller & Partner auf Verlangen des Mandanten alle Unterlagen binnen angemessener Frist herauszugeben, die im Zusammenhang mit der Erledigung seines Auftrags erhalten wurden oder erstellt wurden.</p>
+            
+            <h3>6.2 Zurückbehaltungsrecht</h3>
+            <p>Das Zurückbehaltungsrecht nach § 66 StBerG bleibt unberührt.</p>
+            
+            <h2>7. Datenschutz und Verschwiegenheit</h2>
+            <p>Müller & Partner ist befugt, im Rahmen der Zweckbestimmung des Auftrags die ihm anvertrauten personenbezogenen Daten unter Beachtung der Datenschutzbestimmungen zu erheben, zu speichern und zu verarbeiten.</p>
+            
+            <p>Müller & Partner wird über alle Informationen, die im Zusammenhang mit der Ausführung des Auftrags bekannt werden, Stillschweigen bewahren und Dritten nur mit Einwilligung des Mandanten Auskunft erteilen.</p>
+            
+            <h2>8. Kündigung</h2>
+            <p>Soweit nichts anderes vereinbart ist, kann der Vertrag von beiden Seiten jederzeit schriftlich gekündigt werden.</p>
+            
+            <h2>9. Anwendbares Recht und Gerichtsstand</h2>
+            <p>Für den Auftrag, seine Ausführung und die sich hieraus ergebenden Ansprüche gilt nur deutsches Recht. Erfüllungsort und Gerichtsstand ist der Sitz von Müller & Partner, falls der Mandant Kaufmann, juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen ist.</p>
+            
+            <h2>10. Schlussbestimmungen</h2>
+            <p>Änderungen oder Ergänzungen dieser Allgemeinen Geschäftsbedingungen bedürfen der Schriftform. Dies gilt auch für eine Änderung dieser Schriftformklausel.</p>
+            
+            <p>Sollten einzelne Bestimmungen dieser Allgemeinen Geschäftsbedingungen unwirksam sein oder werden, so berührt dies nicht die Wirksamkeit der übrigen Bestimmungen. Die unwirksame Bestimmung soll durch eine wirksame ersetzt werden, die dem wirtschaftlichen Zweck der unwirksamen Bestimmung am nächsten kommt.</p>
+            
+            <p><strong>Stand: April 2025</strong></p>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Müller & Partner</h3>
+                    <p>Ihre Experten für Steuerberatung und Unternehmensberatung in Musterstadt.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontakt</h3>
+                    <div class="contact-info">
+                        <p>Musterstraße 123</p>
+                        <p>12345 Musterstadt</p>
+                    </div>
+                    <div class="contact-info">
+                        <p>Tel: 030 12345678</p>
+                        <p>E-Mail: info@mueller-partner.de</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Öffnungszeiten</h3>
+                    <div class="contact-info">
+                        <p>Mo - Do: 8:00 - 17:00 Uhr</p>
+                        <p>Fr: 8:00 - 15:00 Uhr</p>
+                        <p>Termine nach Vereinbarung</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                        <li><a href="agb.html">AGB</a></li>
+                        <li><a href="karriere.html">Karriere</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Müller & Partner Steuerberatung. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
