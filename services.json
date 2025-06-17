@@ -1,0 +1,185 @@
+{
+  "services": {
+    "buchfuehrung": {
+      "title": "Buchführung",
+      "icon": "📊",
+      "description": "Monatliche Buchführungspauschale",
+      "items": [
+        {
+          "description": "Gegenstandswert bis 250.000 €",
+          "price_subunternehmer": "221,90 €",
+          "price_endkunden": "253,60 €"
+        },
+        {
+          "description": "Gegenstandswert bis 500.000 €",
+          "price_subunternehmer": "358,40 €",
+          "price_endkunden": "409,60 €"
+        },
+        {
+          "description": "Gegenstandswert bis 1.000.000 €",
+          "price_subunternehmer": "610,40 €",
+          "price_endkunden": "697,60 €"
+        },
+        {
+          "description": "Gegenstandswert ab 2.000.000 €",
+          "price_subunternehmer": "individuell",
+          "price_endkunden": "individuell"
+        }
+      ],
+      "note": "Gebühren gem. StBVV (7/10 Gebührensatz) • Inklusive: Kontierung, Buchung, USt-Voranmeldungen, BWA, Auswertungen"
+    },
+    "lohnbuchhaltung": {
+      "title": "Lohnbuchhaltung",
+      "icon": "💰",
+      "description": "Monatliche Lohnabrechnung",
+      "items": [
+        {
+          "description": "1 Mitarbeiter",
+          "price_subunternehmer": "20,00 €",
+          "price_endkunden": "25,00 €"
+        },
+        {
+          "description": "bis 10 Mitarbeiter",
+          "price_subunternehmer": "18,00 €/MA",
+          "price_endkunden": "20,00 €/MA"
+        },
+        {
+          "description": "10-50 Mitarbeiter",
+          "price_subunternehmer": "16,00 €/MA",
+          "price_endkunden": "18,00 €/MA"
+        },
+        {
+          "description": "über 50 Mitarbeiter",
+          "price_subunternehmer": "15,50 €/MA",
+          "price_endkunden": "16,50 €/MA"
+        }
+      ],
+      "additional_services": {
+        "title": "Zusätzliche Leistungen",
+        "items": [
+          {
+            "description": "Erstmalige Abrechnung/Stammdatenerfassung (digital bereitgestellt)",
+            "price_subunternehmer": "10,00 €",
+            "price_endkunden": "10,00 €"
+          },
+          {
+            "description": "Erstmalige Abrechnung/Stammdatenerfassung (nicht digital)",
+            "price_subunternehmer": "20,00 €",
+            "price_endkunden": "20,00 €"
+          },
+          {
+            "description": "An-/Abmeldung",
+            "price_subunternehmer": "10,00 €",
+            "price_endkunden": "10,00 €"
+          },
+          {
+            "description": "Sofortmeldung",
+            "price_subunternehmer": "10,00 €",
+            "price_endkunden": "10,00 €"
+          },
+          {
+            "description": "AAG-Erstattungsantrag",
+            "price_subunternehmer": "15,00 €",
+            "price_endkunden": "15,00 €"
+          },
+          {
+            "description": "Bescheinigungen (Jahresmeldung, BG, BEA, etc.)",
+            "price_subunternehmer": "25,00 €",
+            "price_endkunden": "25,00 €"
+          }
+        ]
+      },
+      "note": "Preise gelten bei digitaler Bereitstellung • Inklusive aller elektronischen Übermittlungen"
+    },
+    "verwaltungsgebuehr": {
+      "title": "Verwaltungsgebühr",
+      "icon": "📋",
+      "description": "Monatliche Verwaltungsgebühr pro Mandant",
+      "items": [
+        {
+          "description": "bis 5 Mandanten",
+          "price_subunternehmer": "15,00 €/Mandant",
+          "price_endkunden": "15,00 €/Mandant"
+        },
+        {
+          "description": "bis 10 Mandanten",
+          "price_subunternehmer": "12,00 €/Mandant",
+          "price_endkunden": "12,00 €/Mandant"
+        },
+        {
+          "description": "bis 25 Mandanten",
+          "price_subunternehmer": "10,00 €/Mandant",
+          "price_endkunden": "10,00 €/Mandant"
+        },
+        {
+          "description": "über 25 Mandanten",
+          "price_subunternehmer": "5,00 €/Mandant",
+          "price_endkunden": "5,00 €/Mandant"
+        }
+      ],
+      "note": "Die Verwaltungsgebühr wird nur einmal pro Mandant berechnet - unabhängig davon, ob Fibu, Lohn oder beide Leistungen in Anspruch genommen werden."
+    },
+    "erstpruefung": {
+      "title": "Erstprüfung & Analyse",
+      "icon": "🔍",
+      "items": [
+        {
+          "description": "Initiales Buchhaltungs-Audit",
+          "details": [
+            "Prüfung der aktuellen Buchhaltungslage",
+            "Bewertung der Übernahmefähigkeit",
+            "Identifikation von Optimierungsbedarf"
+          ],
+          "price_subunternehmer": "250,00 €",
+          "price_endkunden": "250,00 €"
+        },
+        {
+          "description": "Optimierung/Bereinigung (falls erforderlich)",
+          "price_subunternehmer": "90,00 €/Stunde",
+          "price_endkunden": "90,00 €/Stunde"
+        }
+      ],
+      "note": "Audit-Gebühr wird bei Auftragserteilung zu 50% angerechnet"
+    },
+    "premium_services": {
+      "title": "Premium-Services",
+      "icon": "🚀",
+      "items": [
+        {
+          "description": "Qualitätsaudit (quartalsweise)",
+          "price_subunternehmer": "450,00 €",
+          "price_endkunden": "450,00 €"
+        },
+        {
+          "description": "Digitalisierungsberatung",
+          "price_subunternehmer": "120,00 €/Stunde",
+          "price_endkunden": "120,00 €/Stunde"
+        },
+        {
+          "description": "Prozessoptimierung",
+          "price_subunternehmer": "120,00 €/Stunde",
+          "price_endkunden": "120,00 €/Stunde"
+        },
+        {
+          "description": "Individuelle Schulungen",
+          "price_subunternehmer": "120,00 €/Stunde",
+          "price_endkunden": "120,00 €/Stunde"
+        }
+      ],
+      "note": "Für Mandanten mit laufender Buchhaltung: 20% Rabatt auf alle Premium-Services"
+    },
+    "krypto_services": {
+      "title": "Spezialbereich: Kryptotransaktionen",
+      "icon": "₿",
+      "description": "Professionelle Verbuchung von Bitcoin, Ethereum und anderen Kryptowährungen",
+      "features": [
+        "GoBD-konforme Dokumentation",
+        "Steueroptimiert",
+        "Blockchain-Expertise"
+      ],
+      "price_subunternehmer": "Individuelle Preisvereinbarung",
+      "price_endkunden": "Individuelle Preisvereinbarung",
+      "special": true
+    }
+  }
+}
