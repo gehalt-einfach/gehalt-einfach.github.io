@@ -109,9 +109,15 @@ class ServicesLoader {
         }
 
         html += `
-                </ul>
-                <p class="note">${service.note}</p>
-            </article>`;
+                </ul>`;
+
+        // Add appropriate note based on price type
+        const note = priceType === 'endkunden' ? (service.note_endkunden || service.note) : (service.note_subunternehmer || service.note);
+        if (note) {
+            html += `<p class="note">${note}</p>`;
+        }
+
+        html += `</article>`;
 
         return html;
     }
