@@ -53,8 +53,11 @@ class ServicesLoader {
     }
 
     renderServiceBlock(service, priceType) {
+        // Add id for audit section to enable scroll links
+        const articleId = service.title.includes('Erstprüfung') ? ' id="audit"' : '';
+        
         let html = `
-            <article class="service-block">
+            <article class="service-block"${articleId}>
                 <h3><span role="img" aria-label="${service.title}">${service.icon}</span> ${service.title}</h3>
                 <ul class="price-list">`;
 
@@ -71,18 +74,20 @@ class ServicesLoader {
         if (service.items) {
             service.items.forEach(item => {
                 const price = priceType === 'endkunden' ? item.price_endkunden : item.price_subunternehmer;
+                const arrow = item.description.startsWith('→') ? '' : '→ ';
                 html += `
                     <li class="price-item">
-                        <span class="description">→ ${item.description}</span>
+                        <span class="description">${arrow}${item.description}</span>
                         <span class="price">${price}</span>
                     </li>`;
                 
                 // Add details if available
                 if (item.details) {
                     item.details.forEach(detail => {
+                        const arrow = detail.startsWith('→') ? '' : '→ ';
                         html += `
                     <li class="price-item">
-                        <span class="description">→ ${detail}</span>
+                        <span class="description">${arrow}${detail}</span>
                         <span class="price"></span>
                     </li>`;
                     });
@@ -100,9 +105,10 @@ class ServicesLoader {
 
             service.additional_services.items.forEach(item => {
                 const price = priceType === 'endkunden' ? item.price_endkunden : item.price_subunternehmer;
+                const arrow = item.description.startsWith('→') ? '' : item.description.includes('bereitgestellt') || item.description.includes('digital') ? '→ ' : '';
                 html += `
                     <li class="price-item">
-                        <span class="description">${item.description}</span>
+                        <span class="description">${arrow}${item.description}</span>
                         <span class="price">${price}</span>
                     </li>`;
             });

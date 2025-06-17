@@ -188,18 +188,10 @@
         }
         
         .info-box {
-            background: #fff3cd;
-            border: 1px solid #ffecb5;
-            padding: 20px;
-            border-radius: 6px;
-            margin-bottom: 30px;
-            animation: fadeIn 0.8s ease-out 0.3s both;
-            transition: all 0.3s ease;
-        }
-        
-        .info-box:hover {
-            border-color: #ffc107;
-            box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);
+            background: #FFFFFF;
+            padding: 40px 40px;
+            margin-bottom: 0;
+            border-bottom: 1px solid #F0F0F0;
         }
         
         .info-box a:hover {
@@ -208,24 +200,22 @@
         }
         
         .services {
-            display: grid;
-            gap: 30px;
-            margin-bottom: 30px;
+            padding: 48px 40px 32px;
+            background: #FAFAFA;
         }
         
         .service-block {
-            background: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-radius: 6px;
-            padding: 25px;
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.8s ease-out both;
+            background: #FFFFFF;
+            border-left: 3px solid #F67011;
+            padding: 32px;
+            margin-bottom: 24px;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 3px rgba(22, 21, 26, 0.04);
         }
         
         .service-block:hover {
-            background: #FFFFFF;
             transform: translateX(4px);
-            box-shadow: 0 4px 16px rgba(22, 21, 26, 0.06);
+            box-shadow: 0 4px 16px rgba(22, 21, 26, 0.08);
         }
         
         .service-block h3 {
@@ -300,6 +290,11 @@
             right: 0;
             height: 4px;
             background: #F67011;
+            transition: height 0.3s ease;
+        }
+        
+        .special-service:hover::before {
+            height: 8px;
         }
         
         .special-service h3 {
@@ -602,14 +597,22 @@
         </section>
 
         <section class="info-box" aria-labelledby="process-heading">
-            <p style="margin: 0 0 10px 0; color: #856404; font-size: 14px;">
-                <strong id="process-heading">Unser Prozess:</strong> Vor jeder Zusammenarbeit führen wir ein <a href="#audit" style="color: #FF6B35; font-weight: bold; text-decoration: none; background: rgba(255, 107, 53, 0.1); padding: 2px 8px; border-radius: 4px; display: inline-block; transition: all 0.3s ease; cursor: pointer;">initiales Buchhaltungs-Audit ↓</a> durch. 
-                Dies ermöglicht uns, den Zustand Ihrer Buchhaltung zu bewerten und Ihnen ein maßgeschneidertes Angebot zu erstellen.
-            </p>
-            <p style="margin: 0; color: #856404; font-size: 13px;">
-                <strong>Ihr Vorteil:</strong> Professionelle Buchhaltung nach höchsten Standards. Wir arbeiten transparent und effizient, 
-                damit Sie sich auf Ihr Kerngeschäft konzentrieren können.
-            </p>
+            <div style="display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: start;">
+                <div style="width: 4px; height: 48px; background: #F67011; margin-top: 4px;"></div>
+                <div>
+                    <h3 id="process-heading" style="margin: 0 0 12px 0; color: #16151A; font-size: 18px; font-weight: 700;">Unser Prozess</h3>
+                    <p style="margin: 0 0 16px 0; color: #262626; font-size: 16px; line-height: 1.6;">
+                        Vor jeder Zusammenarbeit führen wir ein <a href="#audit" style="color: #F67011; font-weight: 600; text-decoration: none; border-bottom: 2px solid #F67011; padding-bottom: 1px; transition: all 0.2s ease;">initiales Buchhaltungs-Audit</a> durch. 
+                        Dies ermöglicht uns, den Zustand Ihrer Buchhaltung zu bewerten und Ihnen ein maßgeschneidertes Angebot zu erstellen.
+                    </p>
+                    <div style="background: #16151A; color: white; padding: 16px; margin-top: 16px;">
+                        <p style="margin: 0; font-size: 15px; line-height: 1.5;">
+                            <strong>Ihr Vorteil:</strong> Professionelle Buchhaltung nach höchsten Standards. Wir arbeiten transparent und effizient, 
+                            damit Sie sich auf Ihr Kerngeschäft konzentrieren können.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Services Container - Dynamically Loaded -->
