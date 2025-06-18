@@ -139,7 +139,7 @@
           "price_endkunden": "90,00 €/Stunde"
         }
       ],
-      "note": "Audit-Gebühr wird bei Auftragserteilung zu 50% angerechnet"
+      "note": ""
     },
     "premium_services": {
       "title": "Premium-Services",
@@ -174,7 +174,6 @@
       "description": "Professionelle Verbuchung von Bitcoin, Ethereum und anderen Kryptowährungen",
       "features": [
         "GoBD-konforme Dokumentation",
-        "Steueroptimiert",
         "Blockchain-Expertise"
       ],
       "price_subunternehmer": "Individuelle Preisvereinbarung",

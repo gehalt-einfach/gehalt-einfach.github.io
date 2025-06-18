@@ -53,8 +53,11 @@ class ServicesLoader {
     }
 
     renderServiceBlock(service, priceType) {
+        // Add id="audit" to the Erstprüfung & Analyse section
+        const serviceId = service.title === 'Erstprüfung & Analyse' ? 'id="audit"' : '';
+        
         let html = `
-            <article class="service-block">
+            <article class="service-block" ${serviceId}>
                 <h3><span role="img" aria-label="${service.title}">${service.icon}</span> ${service.title}</h3>
                 <ul class="price-list">`;
 
