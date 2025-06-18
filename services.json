@@ -26,8 +26,7 @@
           "price_endkunden": "individuell"
         }
       ],
-      "note_subunternehmer": "Gebühren gem. StBVV (7/10 Gebührensatz) • Inklusive: Kontierung, Buchung, USt-Voranmeldungen, BWA, Auswertungen",
-      "note_endkunden": "Gebühren gem. StBVV (8/10 Gebührensatz) • Inklusive: Kontierung, Buchung, USt-Voranmeldungen, BWA, Auswertungen"
+      "note": "Gebühren gem. StBVV (7/10 Gebührensatz) • Inklusive: Kontierung, Buchung, USt-Voranmeldungen, BWA, Auswertungen"
     },
     "lohnbuchhaltung": {
       "title": "Lohnbuchhaltung",
@@ -140,7 +139,7 @@
           "price_endkunden": "90,00 €/Stunde"
         }
       ],
- "note": "Transparente Analyse für optimale Buchhaltungsübernahme"
+      "note": "Audit-Gebühr wird bei Auftragserteilung zu 50% angerechnet"
     },
     "premium_services": {
       "title": "Premium-Services",
@@ -175,6 +174,7 @@
       "description": "Professionelle Verbuchung von Bitcoin, Ethereum und anderen Kryptowährungen",
       "features": [
         "GoBD-konforme Dokumentation",
+        "Steueroptimiert",
         "Blockchain-Expertise"
       ],
       "price_subunternehmer": "Individuelle Preisvereinbarung",

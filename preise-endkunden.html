@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professionelle Buchhaltungsdienstleistungen nach dem Sechs-Augen-Prinzip. Buchführung, Lohnbuchhaltung und Steuerberatung für höchste Qualität.">
+    <title>Preisliste für Endkunden - SECHS AUGEN PRINZIP UG</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #F5F7FA;
+            color: #37474F;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            border-bottom: 2px solid #ecf0f1;
+            animation: fadeInDown 0.6s ease-out;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .logo-svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .company-info h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #37474F;
+        }
+        
+        .company-info p {
+            margin: 5px 0 0 0;
+            color: #95A5A6;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+        
+        .principle-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            border-left: 4px solid #FF6B35;
+            animation: fadeIn 0.8s ease-out 0.2s both;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .principle-box:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 3px 10px rgba(255, 107, 53, 0.1);
+        }
+        
+        .principle-box h2 {
+            margin: 0 0 10px 0;
+            color: #37474F;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .principle-box p {
+            margin: 0;
+            color: #37474F;
+            font-size: 14px;
+        }
+        
+        .team-section {
+            background: linear-gradient(135deg, #fff8f5 0%, #ffeee6 100%);
+            padding: 25px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            border-left: 4px solid #E55100;
+            animation: fadeIn 0.8s ease-out 0.1s both;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .team-section:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 3px 10px rgba(229, 81, 0, 0.1);
+        }
+        
+        .team-section h2 {
+            margin: 0 0 15px 0;
+            color: #37474F;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .team-section .team-intro {
+            margin: 0 0 20px 0;
+            color: #37474F;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .team-members {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .team-member {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 15px;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+        
+        .team-member:hover {
+            background: rgba(255, 255, 255, 0.9);
+        }
+        
+        .team-member h3 {
+            margin: 0 0 5px 0;
+            color: #E55100;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .team-member p {
+            margin: 0;
+            color: #95A5A6;
+            font-size: 13px;
+        }
+        
+        .info-box {
+            background: #fff3cd;
+            border: 1px solid #ffecb5;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            animation: fadeIn 0.8s ease-out 0.3s both;
+            transition: all 0.3s ease;
+        }
+        
+        .info-box:hover {
+            border-color: #ffc107;
+            box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);
+        }
+        
+        .info-box a:hover {
+            background: rgba(255, 107, 53, 0.2) !important;
+            transform: scale(1.02);
+        }
+        
+        .services {
+            display: grid;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .service-block {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease-out both;
+        }
+        
+        .service-block:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-color: #FF6B35;
+        }
+        
+        .service-block h3 {
+            margin: 0 0 20px 0;
+            color: #37474F;
+            font-size: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-block h3 span {
+            margin-right: 12px;
+            font-size: 24px;
+        }
+        
+        .price-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            transition: all 0.2s ease;
+        }
+        
+        .price-item:hover {
+            background: #f8f9fa;
+            margin: 0 -10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        .price-item:last-child {
+            border-bottom: none;
+        }
+        
+        .price-item .description {
+            flex: 1;
+            font-size: 14px;
+            color: #37474F;
+        }
+        
+        .price-item .price {
+            font-weight: 600;
+            color: #FF6B35;
+            font-size: 16px;
+            text-align: right;
+            min-width: 120px;
+        }
+        
+        .special-service {
+            background: linear-gradient(135deg, #FF6B35 0%, #E55100 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 6px;
+            text-align: center;
+            margin: 0;
+            animation: fadeIn 0.8s ease-out 0.7s both;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+        
+        .special-service:hover {
+            transform: scale(1.01);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        }
+        
+        .special-service h3 {
+            margin: 0 0 15px 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        
+        .special-service p {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+        
+        .price-item .description strong {
+            color: #37474F;
+            font-size: 15px;
+        }
+        
+        .footer {
+            margin-top: 50px;
+            padding: 30px 20px 20px;
+            border-top: 2px solid #ecf0f1;
+            text-align: center;
+            color: #95A5A6;
+            font-size: 13px;
+            animation: fadeIn 0.8s ease-out 0.8s both;
+        }
+        
+        .contact {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            color: #FF6B35;
+        }
+        
+        .note {
+            font-size: 12px;
+            color: #95A5A6;
+            font-style: italic;
+            margin-top: 10px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 15px;
+            }
+            
+            .logo {
+                margin-right: 0;
+                margin-bottom: 20px;
+                width: 70px;
+                height: 70px;
+            }
+            
+            .company-info h1 {
+                font-size: 24px;
+            }
+            
+            .principle-box,
+            .info-box,
+            .service-block {
+                padding: 20px;
+            }
+            
+            .service-block h3 {
+                font-size: 18px;
+            }
+            
+            .price-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            
+            .price-item .price {
+                min-width: auto;
+                font-size: 14px;
+            }
+            
+            .price-item:hover {
+                margin: 0;
+                padding-left: 0;
+                padding-right: 0;
+                background: transparent;
+            }
+            
+            .contact {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .special-service {
+                padding: 25px 20px;
+            }
+            
+            .special-service h3 {
+                font-size: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .company-info h1 {
+                font-size: 20px;
+            }
+            
+            .principle-box h2,
+            .service-block h3 {
+                font-size: 16px;
+            }
+            
+            .price-item .description {
+                font-size: 13px;
+            }
+            
+            .price-item[style*="background: #f8f9fa"] {
+                margin-left: -5px;
+                margin-right: -5px;
+                padding: 8px;
+            }
+            
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .service-block {
+                page-break-inside: avoid;
+                box-shadow: none !important;
+                transform: none !important;
+            }
+            
+            .special-service {
+                box-shadow: none !important;
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Check authentication
+        if (sessionStorage.getItem('authenticated') !== 'true') {
+            window.location.href = 'index.html';
+        }
+        
+        // Logout function
+        function logout() {
+            sessionStorage.removeItem('authenticated');
+            sessionStorage.removeItem('username');
+            window.location.href = 'index.html';
+        }
+    </script>
+    <div class="container" id="top">
+        <a href="#main-content" class="sr-only" style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Zum Hauptinhalt springen</a>
+        <div style="background: #fff3cd; padding: 15px; text-align: center; margin-bottom: 20px; border-radius: 4px; border: 1px solid #ffc107;">
+            <strong style="color: #856404; font-size: 16px;">Preisliste für Endkunden</strong>
+            <span style="color: #95A5A6; font-size: 14px; margin-left: 10px;">| Direkte Buchhaltungsdienstleistungen</span>
+            <a href="preise-subunternehmer.html" style="display: inline-block; margin-left: 20px; background: #FF6B35; color: white; padding: 6px 15px; border-radius: 4px; text-decoration: none; font-size: 14px; transition: background 0.3s ease;">→ Zu den Steuerberater-Preisen</a>
+            <a href="javascript:logout();" style="display: inline-block; margin-left: 10px; background: #dc3545; color: white; padding: 6px 15px; border-radius: 4px; text-decoration: none; font-size: 14px; transition: background 0.3s ease;">← Logout</a>
+        </div>
+        <header class="header" role="banner">
+            <div class="logo">
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sechs Augen Prinzip Logo - Hexagon mit sechs Augen">
+                    <!-- Hexagon shape -->
+                    <path d="M50 5 L85 25 L85 75 L50 95 L15 75 L15 25 Z" fill="none" stroke="#37474F" stroke-width="2"/>
+                    
+                    <!-- Top section (orange) -->
+                    <path d="M50 5 L85 25 L50 45 L15 25 Z" fill="#FF6B35" opacity="0.9"/>
+                    
+                    <!-- Middle section (gray) -->
+                    <path d="M15 25 L50 45 L50 65 L15 45 Z" fill="#95A5A6" opacity="0.9"/>
+                    <path d="M85 25 L85 45 L50 65 L50 45 Z" fill="#95A5A6" opacity="0.9"/>
+                    
+                    <!-- Bottom section (dark) -->
+                    <path d="M15 45 L50 65 L50 95 L15 75 Z" fill="#37474F" opacity="0.9"/>
+                    <path d="M85 45 L85 75 L50 95 L50 65 Z" fill="#37474F" opacity="0.9"/>
+                    
+                    <!-- Eyes -->
+                    <circle cx="35" cy="25" r="4" fill="white"/>
+                    <circle cx="65" cy="25" r="4" fill="white"/>
+                    <circle cx="35" cy="25" r="2" fill="#37474F"/>
+                    <circle cx="65" cy="25" r="2" fill="#37474F"/>
+                    
+                    <circle cx="25" cy="45" r="4" fill="white"/>
+                    <circle cx="75" cy="45" r="4" fill="white"/>
+                    <circle cx="25" cy="45" r="2" fill="#37474F"/>
+                    <circle cx="75" cy="45" r="2" fill="#37474F"/>
+                    
+                    <circle cx="35" cy="65" r="4" fill="white"/>
+                    <circle cx="65" cy="65" r="4" fill="white"/>
+                    <circle cx="35" cy="65" r="2" fill="#95A5A6"/>
+                    <circle cx="65" cy="65" r="2" fill="#95A5A6"/>
+                </svg>
+            </div>
+            <div class="company-info">
+                <h1>SECHS AUGEN</h1>
+                <p>PRINZIP UG</p>
+            </div>
+        </header>
+
+        <main id="main-content" role="main">
+        <section class="team-section" aria-labelledby="team-heading">
+            <h2 id="team-heading">Unser Expertenteam</h2>
+            <p class="team-intro">Drei Spezialisten mit unterschiedlichen Schwerpunkten arbeiten Hand in Hand, 
+            um Ihnen höchste Qualität in allen Bereichen der Buchhaltung zu garantieren. 
+            Gemeinsam decken wir alle vorbereitenden Tätigkeiten, Lohnabrechnungen und Optimierungsprozesse ab.</p>
+            <div class="team-members">
+                <div class="team-member">
+                    <h3>Ming Tse</h3>
+                    <p>Steuerfachangestellter • Master of Taxation • Tax Specialist</p>
+                </div>
+                <div class="team-member">
+                    <h3>Kevin Conraths</h3>
+                    <p>Steuerfachangestellter • Steuerfachassistent Lohn und Gehalt</p>
+                </div>
+                <div class="team-member">
+                    <h3>Florian Peipe</h3>
+                    <p>Steuerfachangestellter • Steuerfachassistent Digitalisierung und IT-Prozesse</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="principle-box" aria-labelledby="principle-heading">
+            <h2 id="principle-heading">Das Sechs-Augen-Prinzip für Ihr Unternehmen</h2>
+            <p>Drei Spezialisten prüfen Ihre Unterlagen systematisch. Erstbearbeitung → Fachkontrolle → Qualitätssicherung. 
+            So garantieren wir höchste Qualität und minimale Fehlerquoten für Ihre Buchhaltung.</p>
+        </section>
+
+        <section class="info-box" aria-labelledby="process-heading">
+            <p style="margin: 0 0 10px 0; color: #856404; font-size: 14px;">
+                <strong id="process-heading">Unser Prozess:</strong> Vor jeder Zusammenarbeit führen wir ein <a href="#audit" style="color: #FF6B35; font-weight: bold; text-decoration: none; background: rgba(255, 107, 53, 0.1); padding: 2px 8px; border-radius: 4px; display: inline-block; transition: all 0.3s ease; cursor: pointer;">initiales Buchhaltungs-Audit ↓</a> durch. 
+                Dies ermöglicht uns, den Zustand Ihrer Buchhaltung zu bewerten und Ihnen ein maßgeschneidertes Angebot zu erstellen.
+            </p>
+            <p style="margin: 0; color: #856404; font-size: 13px;">
+                <strong>Ihr Vorteil:</strong> Professionelle Buchhaltung nach höchsten Standards. Wir arbeiten transparent und effizient, 
+                damit Sie sich auf Ihr Kerngeschäft konzentrieren können.
+            </p>
+        </section>
+
+        <!-- Services Container - Dynamically Loaded -->
+        <section class="services" aria-labelledby="services-heading" id="services-container">
+            <h2 id="services-heading" class="sr-only" style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Unsere Dienstleistungen</h2>
+            <!-- Services will be loaded dynamically via JavaScript -->
+        </section>
+        </main>
+
+        <footer class="footer" role="contentinfo">
+            <strong>Qualität durch systematische Kontrolle</strong>
+            <div class="contact">
+                <div class="contact-item">
+                    <span role="img" aria-label="E-Mail">📧</span>
+                    <span>Auf Anfrage</span>
+                </div>
+                <div class="contact-item">
+                    <span role="img" aria-label="Telefon">📞</span>
+                    <span>Auf Anfrage</span>
+                </div>
+                <div class="contact-item">
+                    <span role="img" aria-label="Website">🌐</span>
+                    <span>Auf Anfrage</span>
+                </div>
+            </div>
+            <p class="note">Alle Preise verstehen sich zuzüglich der gesetzlichen Umsatzsteuer</p>
+        </footer>
+    </div>
+    
+    <!-- Services Loader Script -->
+    <script src="services-loader.js"></script>
+    <script>
+        // Initialize and load services for Endkunden
+        document.addEventListener('DOMContentLoaded', async function() {
+            const servicesLoader = new ServicesLoader();
+            await servicesLoader.loadServices();
+            servicesLoader.renderServices('services-container', 'endkunden');
+        });
+    </script>
+</body>
+</html>
