@@ -3,125 +3,392 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Login - SECHS AUGEN PRINZIP UG">
-    <title>Login - SECHS AUGEN PRINZIP UG</title>
+    <meta name="description" content="Professionelle Buchhaltungsdienstleistungen nach dem Sechs-Augen-Prinzip. Buchführung, Lohnbuchhaltung und Steuerberatung für höchste Qualität.">
+    <title>Preisliste - SECHS AUGEN PRINZIP UG</title>
     <style>
         * {
             box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        
+        @page {
+            size: A4;
+            margin: 2cm;
         }
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #FAFAFA;
-            color: #262626;
+            background: #f5f7fa;
+            color: #2c3e50;
             line-height: 1.6;
             min-height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center;
         }
         
-        .login-container {
-            background: white;
-            padding: 40px;
-            border-radius: 6px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        .container {
             width: 100%;
-            max-width: 400px;
-            animation: fadeIn 0.6s ease-out;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            border-bottom: 2px solid #ecf0f1;
+            animation: fadeInDown 0.6s ease-out;
         }
         
         .logo {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 30px;
-            display: block;
+            width: 80px;
+            height: 80px;
+            margin-right: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
         }
         
-        h1 {
-            text-align: center;
-            margin: 0 0 10px 0;
-            font-size: 24px;
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .logo-svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .company-info h1 {
+            margin: 0;
+            font-size: 28px;
             font-weight: 600;
-            color: #16151A;
+            letter-spacing: 1px;
+            color: #2c3e50;
         }
         
-        .subtitle {
-            text-align: center;
-            color: #878787;
+        .company-info p {
+            margin: 5px 0 0 0;
+            color: #7f8c8d;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+        
+        .principle-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 12px;
             margin-bottom: 30px;
-            font-size: 14px;
+            border-left: 4px solid #3498db;
+            animation: fadeIn 0.8s ease-out 0.2s both;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
-        .form-group {
-            margin-bottom: 20px;
+        .principle-box:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.1);
         }
         
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: #262626;
-            font-size: 14px;
-        }
-        
-        input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 16px;
-            transition: border-color 0.3s ease;
-        }
-        
-        input:focus {
-            outline: none;
-            border-color: #F67011;
-        }
-        
-        button {
-            width: 100%;
-            padding: 14px;
-            background: #F67011;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
+        .principle-box h2 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+            font-size: 18px;
             font-weight: 600;
-            cursor: pointer;
+        }
+        
+        .principle-box p {
+            margin: 0;
+            color: #555;
+            font-size: 14px;
+        }
+        
+        .info-box {
+            background: #fff3cd;
+            border: 1px solid #ffecb5;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            animation: fadeIn 0.8s ease-out 0.3s both;
             transition: all 0.3s ease;
         }
         
-        button:hover {
-            background: #875800;
-            transform: translateY(-1px);
-            box-shadow: 0 2px 8px rgba(246, 112, 17, 0.2);
+        .info-box:hover {
+            border-color: #ffc107;
+            box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);
         }
         
-        .error-message {
-            background: #fee;
-            color: #c33;
-            padding: 12px;
-            border-radius: 4px;
-            margin-bottom: 20px;
+        .info-box a:hover {
+            background: rgba(0,102,204,0.2) !important;
+            transform: scale(1.02);
+        }
+        
+        .services {
+            display: grid;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .service-block {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease-out both;
+        }
+        
+        .service-block:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border-color: #3498db;
+        }
+        
+        .service-block h3 {
+            margin: 0 0 20px 0;
+            color: #2c3e50;
+            font-size: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-block h3 span {
+            margin-right: 12px;
+            font-size: 24px;
+        }
+        
+        .price-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            transition: all 0.2s ease;
+        }
+        
+        .price-item:hover {
+            background: #f8f9fa;
+            margin: 0 -10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        .price-item:last-child {
+            border-bottom: none;
+        }
+        
+        .price-item .description {
+            flex: 1;
             font-size: 14px;
-            display: none;
-            animation: shake 0.5s ease-out;
+            color: #555;
         }
         
-        .info-message {
-            background: #FFE4D0;
-            color: #262626;
-            padding: 12px;
-            border-radius: 4px;
-            margin-top: 20px;
-            font-size: 13px;
+        .price-item .price {
+            font-weight: 600;
+            color: #3498db;
+            font-size: 16px;
+            text-align: right;
+            min-width: 120px;
+        }
+        
+        .special-service {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
             text-align: center;
+            margin: 0;
+            animation: fadeIn 0.8s ease-out 0.7s both;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
         }
         
+        .special-service:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+        }
+        
+        .special-service h3 {
+            margin: 0 0 15px 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        
+        .special-service p {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+        
+        .price-item .description strong {
+            color: #2c3e50;
+            font-size: 15px;
+        }
+        
+        .footer {
+            margin-top: 50px;
+            padding: 30px 20px 20px;
+            border-top: 2px solid #ecf0f1;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 13px;
+            animation: fadeIn 0.8s ease-out 0.8s both;
+        }
+        
+        .contact {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            color: #3498db;
+        }
+        
+        .note {
+            font-size: 12px;
+            color: #95a5a6;
+            font-style: italic;
+            margin-top: 10px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 15px;
+            }
+            
+            .logo {
+                margin-right: 0;
+                margin-bottom: 20px;
+                width: 70px;
+                height: 70px;
+            }
+            
+            .company-info h1 {
+                font-size: 24px;
+            }
+            
+            .principle-box,
+            .info-box,
+            .service-block {
+                padding: 20px;
+            }
+            
+            .service-block h3 {
+                font-size: 18px;
+            }
+            
+            .price-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            
+            .price-item .price {
+                min-width: auto;
+                font-size: 14px;
+            }
+            
+            .price-item:hover {
+                margin: 0;
+                padding-left: 0;
+                padding-right: 0;
+                background: transparent;
+            }
+            
+            .contact {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .special-service {
+                padding: 25px 20px;
+            }
+            
+            .special-service h3 {
+                font-size: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .company-info h1 {
+                font-size: 20px;
+            }
+            
+            .principle-box h2,
+            .service-block h3 {
+                font-size: 16px;
+            }
+            
+            .price-item .description {
+                font-size: 13px;
+            }
+            
+            .price-item[style*="background: #f8f9fa"] {
+                margin-left: -5px;
+                margin-right: -5px;
+                padding: 8px;
+            }
+            
+        }
+        
+        /* Animations */
         @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(20px);
@@ -132,130 +399,285 @@
             }
         }
         
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-            20%, 40%, 60%, 80% { transform: translateX(5px); }
-        }
-        
-        @media (max-width: 480px) {
-            .login-container {
-                padding: 30px 20px;
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
             }
             
-            .logo {
-                width: 80px;
-                height: 80px;
+            .container {
+                box-shadow: none;
+                max-width: 100%;
             }
             
-            h1 {
-                font-size: 20px;
+            .service-block {
+                page-break-inside: avoid;
+                box-shadow: none !important;
+                transform: none !important;
+            }
+            
+            .special-service {
+                box-shadow: none !important;
+                transform: none !important;
             }
         }
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <!-- Hexagon shape -->
-            <path d="M50 5 L85 25 L85 75 L50 95 L15 75 L15 25 Z" fill="none" stroke="#16151A" stroke-width="2"/>
-            
-            <!-- Top section (orange) -->
-            <path d="M50 5 L85 25 L50 45 L15 25 Z" fill="#F67011" opacity="0.9"/>
-            
-            <!-- Middle section (gray) -->
-            <path d="M15 25 L50 45 L50 65 L15 45 Z" fill="#878787" opacity="0.9"/>
-            <path d="M85 25 L85 45 L50 65 L50 45 Z" fill="#878787" opacity="0.9"/>
-            
-            <!-- Bottom section (dark) -->
-            <path d="M15 45 L50 65 L50 95 L15 75 Z" fill="#16151A" opacity="0.9"/>
-            <path d="M85 45 L85 75 L50 95 L50 65 Z" fill="#16151A" opacity="0.9"/>
-            
-            <!-- Eyes -->
-            <circle cx="35" cy="25" r="4" fill="white"/>
-            <circle cx="65" cy="25" r="4" fill="white"/>
-            <circle cx="35" cy="25" r="2" fill="#16151A"/>
-            <circle cx="65" cy="25" r="2" fill="#16151A"/>
-            
-            <circle cx="25" cy="45" r="4" fill="white"/>
-            <circle cx="75" cy="45" r="4" fill="white"/>
-            <circle cx="25" cy="45" r="2" fill="#16151A"/>
-            <circle cx="75" cy="45" r="2" fill="#16151A"/>
-            
-            <circle cx="35" cy="65" r="4" fill="white"/>
-            <circle cx="65" cy="65" r="4" fill="white"/>
-            <circle cx="35" cy="65" r="2" fill="#878787"/>
-            <circle cx="65" cy="65" r="2" fill="#878787"/>
-        </svg>
-        
-        <h1>SECHS AUGEN PRINZIP UG</h1>
-        <p class="subtitle">Bitte melden Sie sich an</p>
-        
-        <div class="error-message" id="error-message">
-            Ungültige Anmeldedaten. Bitte versuchen Sie es erneut.
-        </div>
-        
-        <form id="login-form">
-            <div class="form-group">
-                <label for="username">Benutzername</label>
-                <input type="text" id="username" name="username" required autocomplete="username">
+    <div class="container" id="top">
+        <a href="#main-content" class="sr-only" style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Zum Hauptinhalt springen</a>
+        <header class="header" role="banner">
+            <div class="logo">
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sechs Augen Prinzip Logo - Hexagon mit sechs Augen">
+                    <!-- Hexagon shape -->
+                    <path d="M50 5 L85 25 L85 75 L50 95 L15 75 L15 25 Z" fill="none" stroke="#2c3e50" stroke-width="2"/>
+                    
+                    <!-- Top section (blue) -->
+                    <path d="M50 5 L85 25 L50 45 L15 25 Z" fill="#3498db" opacity="0.9"/>
+                    
+                    <!-- Middle section (gray) -->
+                    <path d="M15 25 L50 45 L50 65 L15 45 Z" fill="#95a5a6" opacity="0.9"/>
+                    <path d="M85 25 L85 45 L50 65 L50 45 Z" fill="#95a5a6" opacity="0.9"/>
+                    
+                    <!-- Bottom section (dark) -->
+                    <path d="M15 45 L50 65 L50 95 L15 75 Z" fill="#2c3e50" opacity="0.9"/>
+                    <path d="M85 45 L85 75 L50 95 L50 65 Z" fill="#2c3e50" opacity="0.9"/>
+                    
+                    <!-- Eyes -->
+                    <circle cx="35" cy="25" r="4" fill="white"/>
+                    <circle cx="65" cy="25" r="4" fill="white"/>
+                    <circle cx="35" cy="25" r="2" fill="#2c3e50"/>
+                    <circle cx="65" cy="25" r="2" fill="#2c3e50"/>
+                    
+                    <circle cx="25" cy="45" r="4" fill="white"/>
+                    <circle cx="75" cy="45" r="4" fill="white"/>
+                    <circle cx="25" cy="45" r="2" fill="#2c3e50"/>
+                    <circle cx="75" cy="45" r="2" fill="#2c3e50"/>
+                    
+                    <circle cx="35" cy="65" r="4" fill="white"/>
+                    <circle cx="65" cy="65" r="4" fill="white"/>
+                    <circle cx="35" cy="65" r="2" fill="#95a5a6"/>
+                    <circle cx="65" cy="65" r="2" fill="#95a5a6"/>
+                </svg>
             </div>
-            
-            <div class="form-group">
-                <label for="password">Passwort</label>
-                <input type="password" id="password" name="password" required autocomplete="current-password">
+            <div class="company-info">
+                <h1>SECHS AUGEN</h1>
+                <p>PRINZIP UG</p>
             </div>
-            
-            <button type="submit">Anmelden</button>
-        </form>
-        
-        <div class="info-message">
-            Geschützter Bereich - Nur für autorisierte Nutzer
-        </div>
+        </header>
+
+        <main id="main-content" role="main">
+        <section class="principle-box" aria-labelledby="principle-heading">
+            <h2 id="principle-heading">Das Sechs-Augen-Prinzip</h2>
+            <p>Drei Spezialisten prüfen Ihre Unterlagen systematisch. Erstbearbeitung → Fachkontrolle → Qualitätssicherung. 
+            So garantieren wir höchste Qualität und minimale Fehlerquoten.</p>
+        </section>
+
+        <section class="info-box" aria-labelledby="process-heading">
+            <p style="margin: 0 0 10px 0; color: #856404; font-size: 14px;">
+                <strong id="process-heading">Unser Prozess:</strong> Vor jeder Mandatsübernahme führen wir ein <a href="#audit" style="color: #0066cc; font-weight: bold; text-decoration: none; background: rgba(0,102,204,0.1); padding: 2px 8px; border-radius: 4px; display: inline-block; transition: all 0.3s ease; cursor: pointer;">initiales Buchhaltungs-Audit ↓</a> durch. 
+                Dies ermöglicht uns, den Zustand Ihrer Buchhaltung zu bewerten und Ihnen ein maßgeschneidertes Angebot zu erstellen.
+            </p>
+            <p style="margin: 0; color: #856404; font-size: 13px;">
+                <strong>Ihr Vorteil als Steuerberater:</strong> Unsere Gebühren basieren auf dem 7/10-Satz der StBVV. 
+                Sie erhalten eine abschlussreife Finanzbuchhaltung und können sich auf die gewinnbringende Jahresabschlusserstellung konzentrieren.
+            </p>
+        </section>
+
+        <section class="services" aria-labelledby="services-heading">
+            <h2 id="services-heading" class="sr-only" style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Unsere Dienstleistungen</h2>
+            <article class="service-block">
+                <h3><span role="img" aria-label="Diagramm">📊</span> Buchführung</h3>
+                <ul class="price-list">
+                    <li class="price-item" style="background: #f8f9fa; padding: 10px; margin: -10px -10px 10px; border-radius: 6px;">
+                        <span class="description"><strong style="font-size: 16px; color: #2c3e50;">Monatliche Buchführungspauschale</strong></span>
+                        <span class="price"></span>
+                    </li>
+                    <li class="price-item">
+                        <span class="description">→ Gegenstandswert bis 250.000 €</span>
+                        <span class="price">221,90 €</span>
+                    </li>
+                    <li class="price-item">
+                        <span class="description">→ Gegenstandswert bis 500.000 €</span>
+                        <span class="price">358,40 €</span>
+                    </li>
+                    <li class="price-item">
+                        <span class="description">→ Gegenstandswert bis 1.000.000 €</span>
+                        <span class="price">610,40 €</span>
+                    </li>
+                    <li class="price-item">
+                        <span class="description">→ Gegenstandswert ab 2.000.000 €</span>
+                        <span class="price">individuell</span>
+                    </li>
+                </ul>
+                <p class="note">Gebühren gem. StBVV (7/10 Gebührensatz) • Inklusive: Kontierung, Buchung, USt-Voranmeldungen, BWA, Auswertungen</p>
+            </article>
+
+            <article class="service-block">
+                <h3><span role="img" aria-label="Geld">💰</span> Lohnbuchhaltung</h3>
+                <ul class="price-list">
+                    <li class="price-item" style="background: #f8f9fa; padding: 10px; margin: -10px -10px 10px; border-radius: 6px;">
+                        <span class="description"><strong style="font-size: 16px; color: #2c3e50;">Monatliche Lohnabrechnung</strong></span>
+                        <span class="price"></span>
+                    </li>
+                    <li class="price-item">
+                        <span class="description">→ 1 Mitarbeiter</span>
+                        <span class="price">22,00 €</span>
+                    </li>
+                    <li class="price-item">
+                        <span class="description">→ bis 10 Mitarbeiter</span>
+                        <span class="price">20,00 €/MA</span>
+                    </li>
+                    <li class="price-item">
+                        <span class="description">→ 10-50 Mitarbeiter</span>
+                        <span class="price">18,00 €/MA</span>
+                    </li>
+                    <li class="price-item">
+                        <span class="description">→ über 50 Mitarbeiter</span>
+                        <span class="price">16,50 €/MA</span>
+                    </li>
+                    <li class="price-item" style="margin-top: 15px; background: #f8f9fa; padding: 10px; margin-left: -10px; margin-right: -10px; border-radius: 6px;">
+                        <span class="description"><strong style="font-size: 16px; color: #2c3e50;">Zusätzliche Leistungen</strong></span>
+                        <span class="price"></span>
+                    </li>
+                    <li class="price-item" style="margin-top: 10px;">
+                        <span class="description"><strong style="color: #555;">Erstmalige Abrechnung/Stammdatenerfassung</strong></span>
+                        <span class="price"></span>
+                    </li>
+                    <li class="price-item" style="font-size: 13px;">
+                        <span class="description" style="color: #7f8c8d;">→ digital bereitgestellt</span>
+                        <span class="price" style="font-size: 14px;">10,00 €</span>
+                    </li>
+                    <li class="price-item" style="font-size: 13px;">
+                        <span class="description" style="color: #7f8c8d;">→ nicht digital</span>
+                        <span class="price" style="font-size: 14px;">20,00 €</span>
+                    </li>
+                    <li class="price-item">
+                        <span class="description">An-/Abmeldung</span>
+                        <span class="price">10,00 €</span>
+                    </li>
+                    <li class="price-item">
+                        <span class="description">Sofortmeldung</span>
+                        <span class="price">10,00 €</span>
+                    </li>
+                    <li class="price-item">
+                        <span class="description">AAG-Erstattungsantrag</span>
+                        <span class="price">15,00 €</span>
+                    </li>
+                    <li class="price-item">
+                        <span class="description">Bescheinigungen (BAG, Jahresmeldung, BG etc.)</span>
+                        <span class="price">25,00 €</span>
+                    </li>
+                </ul>
+                <p class="note">Preise gelten bei digitaler Bereitstellung • Inklusive aller elektronischen Übermittlungen</p>
+            </article>
+
+            <article class="service-block">
+                <h3><span role="img" aria-label="Klemmbrett">📋</span> Verwaltungsgebühr</h3>
+                <ul class="price-list">
+                    <li class="price-item" style="background: #f8f9fa; padding: 10px; margin: -10px -10px 10px; border-radius: 6px;">
+                        <span class="description"><strong style="font-size: 16px; color: #2c3e50;">Monatliche Verwaltungsgebühr pro Mandant</strong></span>
+                        <span class="price"></span>
+                    </li>
+                    <li class="price-item">
+                        <span class="description">→ bis 5 Mandanten</span>
+                        <span class="price">15,00 €/Mandant</span>
+                    </li>
+                    <li class="price-item">
+                        <span class="description">→ bis 10 Mandanten</span>
+                        <span class="price">12,00 €/Mandant</span>
+                    </li>
+                    <li class="price-item">
+                        <span class="description">→ bis 25 Mandanten</span>
+                        <span class="price">10,00 €/Mandant</span>
+                    </li>
+                    <li class="price-item">
+                        <span class="description">→ über 25 Mandanten</span>
+                        <span class="price">5,00 €/Mandant</span>
+                    </li>
+                </ul>
+                <p class="note">Die Verwaltungsgebühr wird nur einmal pro Mandant berechnet - unabhängig davon, ob Fibu, Lohn oder beide Leistungen in Anspruch genommen werden.</p>
+            </article>
+        </section>
+
+        <section class="service-block" id="audit">
+            <h3><span role="img" aria-label="Lupe">🔍</span> Erstprüfung & Analyse</h3>
+            <ul class="price-list">
+                <li class="price-item">
+                    <span class="description"><strong>Initiales Buchhaltungs-Audit</strong></span>
+                    <span class="price">250,00 €</span>
+                </li>
+                <li class="price-item">
+                    <span class="description">→ Prüfung der aktuellen Buchhaltungslage</span>
+                    <span class="price"></span>
+                </li>
+                <li class="price-item">
+                    <span class="description">→ Bewertung der Übernahmefähigkeit</span>
+                    <span class="price"></span>
+                </li>
+                <li class="price-item">
+                    <span class="description">→ Identifikation von Optimierungsbedarf</span>
+                    <span class="price"></span>
+                </li>
+                <li class="price-item" style="margin-top: 10px;">
+                    <span class="description"><strong>Optimierung/Bereinigung</strong> (falls erforderlich)</span>
+                    <span class="price">90,00 €/Stunde</span>
+                </li>
+            </ul>
+            <p class="note">Audit-Gebühr wird bei Auftragserteilung zu 50% angerechnet</p>
+        </section>
+
+        <section class="service-block special-service" style="margin-top: 30px;">
+            <h3><span role="img" aria-label="Bitcoin">₿</span> Spezialbereich: Kryptotransaktionen</h3>
+            <p>Professionelle Verbuchung von Bitcoin, Ethereum und anderen Kryptowährungen</p>
+            <p>GoBD-konforme Dokumentation • Steueroptimiert • Blockchain-Expertise</p>
+            <p style="font-size: 18px; margin-top: 15px;"><strong>Individuelle Preisvereinbarung</strong></p>
+        </section>
+
+        <section class="services" style="margin-top: 30px;">
+            <article class="service-block">
+                <h3><span role="img" aria-label="Rakete">🚀</span> Premium-Services</h3>
+                <ul class="price-list">
+                    <li class="price-item">
+                        <span class="description">Qualitätsaudit (quartalsweise)</span>
+                        <span class="price">450,00 €</span>
+                    </li>
+                    <li class="price-item">
+                        <span class="description">Digitalisierungsberatung</span>
+                        <span class="price">120,00 €/Stunde</span>
+                    </li>
+                    <li class="price-item">
+                        <span class="description">Prozessoptimierung</span>
+                        <span class="price">120,00 €/Stunde</span>
+                    </li>
+                    <li class="price-item">
+                        <span class="description">Individuelle Schulungen</span>
+                        <span class="price">120,00 €/Stunde</span>
+                    </li>
+                </ul>
+                <p class="note">Für Mandanten mit laufender Buchhaltung: 20% Rabatt auf alle Premium-Services</p>
+            </article>
+        </section>
+        </main>
+
+        <footer class="footer" role="contentinfo">
+            <strong>Qualität durch systematische Kontrolle</strong>
+            <div class="contact">
+                <div class="contact-item">
+                    <span role="img" aria-label="E-Mail">📧</span>
+                    <a href="mailto:info@6-augen-prinzip.de" style="color: inherit; text-decoration: none;">info@6-augen-prinzip.de</a>
+                </div>
+                <div class="contact-item">
+                    <span role="img" aria-label="Telefon">📞</span>
+                    <span>Telefon auf Anfrage</span>
+                </div>
+                <div class="contact-item">
+                    <span role="img" aria-label="Website">🌐</span>
+                    <span>www.6-augen-prinzip.de</span>
+                </div>
+            </div>
+            <p class="note">Alle Preise verstehen sich zuzüglich der gesetzlichen Umsatzsteuer</p>
+        </footer>
     </div>
-    
-    <script>
-        // Simple client-side authentication
-        // WICHTIG: Dies ist nur eine einfache Lösung für den internen Gebrauch
-        // Für produktive Umgebungen sollte serverseitige Authentifizierung verwendet werden
-        
-        const validCredentials = {
-            'admin': 'sechs2024',
-            'steuerberater': 'partner2024'
-        };
-        
-        document.getElementById('login-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const errorMessage = document.getElementById('error-message');
-            
-            if (validCredentials[username] && validCredentials[username] === password) {
-                // Set session storage to remember login
-                sessionStorage.setItem('authenticated', 'true');
-                sessionStorage.setItem('username', username);
-                
-                // Redirect to protected page
-                window.location.href = 'preise-subunternehmer.html';
-            } else {
-                // Show error message
-                errorMessage.style.display = 'block';
-                
-                // Clear password field
-                document.getElementById('password').value = '';
-                
-                // Hide error message after 3 seconds
-                setTimeout(() => {
-                    errorMessage.style.display = 'none';
-                }, 3000);
-            }
-        });
-        
-        // Check if already authenticated
-        if (sessionStorage.getItem('authenticated') === 'true') {
-            window.location.href = 'preise-subunternehmer.html';
-        }
-    </script>
 </body>
 </html>
